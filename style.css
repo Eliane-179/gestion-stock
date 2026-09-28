@@ -1,0 +1,169 @@
+/* Couleurs réutilisées partout */
+:root {
+--bordeaux: #4A1F24;
+--accent: #8C3B45;
+--fond: #F4F4F6;
+--texte: #222222;
+--alerte: #FDE2E2;
+}
+
+* {
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+background: var(--fond);
+color: var(--texte);
+}
+
+header {
+background: var(--bordeaux);
+color: white;
+padding: 24px 16px;
+text-align: center;
+}
+
+header h1 {
+margin: 0 0 6px;
+}
+
+header p {
+margin: 0;
+opacity: 0.85;
+}
+
+main {
+max-width: 800px;
+margin: 24px auto;
+padding: 0 16px;
+}
+
+.carte {
+background: white;
+border-radius: 10px;
+padding: 20px;
+margin-bottom: 20px;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+margin-top: 0;
+color: var(--bordeaux);
+}
+
+/* Formulaire */
+label {
+display: block;
+font-weight: bold;
+margin: 12px 0 4px;
+}
+
+input {
+width: 100%;
+padding: 10px;
+border: 1px solid #CCCCCC;
+border-radius: 6px;
+font-size: 16px;
+}
+
+button {
+cursor: pointer;
+border: none;
+border-radius: 6px;
+font-size: 15px;
+}
+
+form button {
+margin-top: 16px;
+width: 100%;
+padding: 12px;
+background: var(--accent);
+color: white;
+font-weight: bold;
+}
+
+form button:hover {
+background: var(--bordeaux);
+}
+
+.erreur {
+color: #B00020;
+margin: 8px 0 0;
+min-height: 1em;
+}
+
+/* Tableau */
+.tableau-conteneur {
+overflow-x: auto;
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+}
+
+th, td {
+padding: 10px;
+text-align: left;
+border-bottom: 1px solid #EEEEEE;
+}
+
+th {
+background: var(--fond);
+}
+
+/* Ligne en stock bas */
+tr.alerte {
+background: var(--alerte);
+}
+
+tr.alerte td:first-child::after {
+content: " ⚠ stock bas";
+color: #B00020;
+font-size: 12px;
+font-weight: bold;
+}
+
+/* Boutons d'action */
+td button {
+padding: 6px 10px;
+margin-right: 4px;
+color: white;
+}
+
+.plus {
+background: #2E7D32;
+}
+
+.moins {
+background: #EF6C00;
+}
+
+.supprimer {
+background: #B00020;
+}
+
+.resume {
+color: #555555;
+}
+
+.vide {
+text-align: center;
+color: #777777;
+font-style: italic;
+}
+
+/* Petits écrans (téléphones) */
+@media (max-width: 500px) {
+th, td {
+padding: 8px 6px;
+font-size: 14px;
+}
+
+td button {
+padding: 5px 7px;
+margin-bottom: 4px;
+}
+}

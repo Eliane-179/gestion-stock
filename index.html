@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestion de stock</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>Gestion de stock</h1>
+<p>Suivez vos produits et repérez les stocks bas.</p>
+</header>
+
+<main>
+<!-- Formulaire d'ajout -->
+<section class="carte">
+<h2>Ajouter un produit</h2>
+<form id="formulaire">
+<label for="nom">Nom du produit</label>
+<input type="text" id="nom" placeholder="Ex. : Riz 5 kg">
+
+<label for="quantite">Quantité</label>
+<input type="number" id="quantite" min="0" placeholder="Ex. : 20">
+
+<label for="seuil">Seuil d'alerte</label>
+<input type="number" id="seuil" min="0" placeholder="Ex. : 5">
+
+<p id="erreur" class="erreur"></p>
+<button type="submit">Ajouter le produit</button>
+</form>
+</section>
+
+<!-- Liste des produits -->
+<section class="carte">
+<h2>Mes produits</h2>
+<p id="resume" class="resume"></p>
+<div class="tableau-conteneur">
+<table>
+<thead>
+<tr>
+<th>Produit</th>
+<th>Quantité</th>
+<th>Seuil</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody id="liste"></tbody>
+</table>
+</div>
+<p id="vide" class="vide">Aucun produit pour le moment. Ajoutez-en un avec le formulaire.</p>
+</section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
